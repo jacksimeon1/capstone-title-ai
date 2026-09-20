@@ -3,8 +3,22 @@
 @tailwind utilities;
 
 @layer base {
+  html.dark {
+    color-scheme: dark;
+  }
+  html.light, html:not(.dark) {
+    color-scheme: light;
+  }
   body {
     @apply bg-academic-50 dark:bg-academic-950 text-academic-900 dark:text-academic-50 font-sans;
+  }
+  select option {
+    background-color: #ffffff;
+    color: #0f172a;
+  }
+  .dark select option {
+    background-color: #1e293b;
+    color: #f8fafc;
   }
 }
 

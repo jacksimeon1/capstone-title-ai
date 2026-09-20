@@ -155,17 +155,17 @@ export const GeneratorView: React.FC<GeneratorViewProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left Form: Parameters */}
         <div className="lg:col-span-5 bg-white dark:bg-academic-900 p-5 sm:p-6 rounded-2xl border border-academic-200 dark:border-academic-800 shadow-academic space-y-6 transition-colors">
-          <div className="flex items-center justify-between pb-3 border-b border-academic-100 dark:border-academic-800">
-            <h2 className="text-sm font-bold text-academic-900 dark:text-academic-100 font-serif">Project Parameters</h2>
-            <div className="flex items-center gap-1">
-              <span className="text-[11px] text-academic-400 dark:text-academic-500">Load sample:</span>
+          <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-academic-100 dark:border-academic-800">
+            <h2 className="text-sm font-bold text-academic-900 dark:text-academic-100 font-serif whitespace-nowrap">Project Parameters</h2>
+            <div className="flex items-center gap-1.5 shrink-0">
+              <span className="text-[11px] text-academic-500 dark:text-academic-400 font-medium">Load sample:</span>
               <select
                 onChange={(e) => {
                   const idx = parseInt(e.target.value, 10);
                   if (!isNaN(idx)) handleApplySample(SAMPLE_PROMPT_IDEAS[idx]);
                 }}
                 defaultValue=""
-                className="text-[11px] py-0.5 px-2 bg-academic-50 dark:bg-academic-800 rounded border border-academic-200 dark:border-academic-700 text-academic-700 dark:text-academic-300 focus:outline-none"
+                className="text-[11px] py-1 px-2.5 bg-academic-100 dark:bg-academic-800 rounded-lg border border-academic-300 dark:border-academic-700 text-academic-800 dark:text-academic-200 focus:outline-none focus:ring-1 focus:ring-navy-500 cursor-pointer"
               >
                 <option value="" disabled>Choose preset</option>
                 {SAMPLE_PROMPT_IDEAS.map((s, idx) => (
@@ -188,7 +188,7 @@ export const GeneratorView: React.FC<GeneratorViewProps> = ({
                 value={idea}
                 onChange={(e) => setIdea(e.target.value)}
                 placeholder="Describe what the system will do, who it helps, and what problem it resolves..."
-                className="w-full p-3 rounded-xl border border-academic-300 dark:border-academic-700 focus:outline-none focus:ring-1 focus:ring-navy-600 bg-academic-50/50 dark:bg-academic-850 dark:text-academic-100 placeholder:text-academic-400 leading-relaxed text-xs"
+                className="w-full p-3 rounded-xl border border-academic-300 dark:border-academic-700 focus:outline-none focus:ring-1 focus:ring-navy-600 bg-academic-50/50 dark:bg-academic-800 dark:text-academic-100 placeholder:text-academic-400 leading-relaxed text-xs"
               />
             </div>
 
@@ -199,7 +199,7 @@ export const GeneratorView: React.FC<GeneratorViewProps> = ({
                 <select
                   value={program}
                   onChange={(e) => setProgram(e.target.value as AcademicProgram)}
-                  className="w-full p-2.5 rounded-lg border border-academic-300 dark:border-academic-700 bg-white dark:bg-academic-850 dark:text-academic-100 focus:outline-none focus:ring-1 focus:ring-navy-600 text-xs"
+                  className="w-full p-2.5 rounded-lg border border-academic-300 dark:border-academic-700 bg-white dark:bg-academic-800 text-academic-900 dark:text-academic-100 focus:outline-none focus:ring-2 focus:ring-navy-500/50 text-xs font-medium cursor-pointer"
                 >
                   {ACADEMIC_PROGRAMS.map((p) => (
                     <option key={p} value={p}>{p}</option>
@@ -211,7 +211,7 @@ export const GeneratorView: React.FC<GeneratorViewProps> = ({
                     placeholder="Specify program..."
                     value={customProgram}
                     onChange={(e) => setCustomProgram(e.target.value)}
-                    className="mt-1.5 w-full p-2 rounded border border-academic-300 dark:border-academic-700 bg-white dark:bg-academic-850 text-xs"
+                    className="mt-1.5 w-full p-2 rounded-lg border border-academic-300 dark:border-academic-700 bg-white dark:bg-academic-800 text-academic-900 dark:text-academic-100 placeholder:text-academic-400 text-xs focus:outline-none focus:ring-2 focus:ring-navy-500/50"
                   />
                 )}
               </div>
@@ -222,7 +222,7 @@ export const GeneratorView: React.FC<GeneratorViewProps> = ({
                 <select
                   value={projectType}
                   onChange={(e) => setProjectType(e.target.value as ProjectType)}
-                  className="w-full p-2.5 rounded-lg border border-academic-300 dark:border-academic-700 bg-white dark:bg-academic-850 dark:text-academic-100 focus:outline-none focus:ring-1 focus:ring-navy-600 text-xs"
+                  className="w-full p-2.5 rounded-lg border border-academic-300 dark:border-academic-700 bg-white dark:bg-academic-800 text-academic-900 dark:text-academic-100 focus:outline-none focus:ring-2 focus:ring-navy-500/50 text-xs font-medium cursor-pointer"
                 >
                   {PROJECT_TYPES.map((t) => (
                     <option key={t} value={t}>{t}</option>
@@ -234,7 +234,7 @@ export const GeneratorView: React.FC<GeneratorViewProps> = ({
                     placeholder="Specify project type..."
                     value={customProjectType}
                     onChange={(e) => setCustomProjectType(e.target.value)}
-                    className="mt-1.5 w-full p-2 rounded border border-academic-300 dark:border-academic-700 bg-white dark:bg-academic-850 text-xs"
+                    className="mt-1.5 w-full p-2 rounded-lg border border-academic-300 dark:border-academic-700 bg-white dark:bg-academic-800 text-academic-900 dark:text-academic-100 placeholder:text-academic-400 text-xs focus:outline-none focus:ring-2 focus:ring-navy-500/50"
                   />
                 )}
               </div>
