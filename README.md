@@ -4,10 +4,13 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](https://opensource.org/licenses/MIT)
 [![Open Source](https://img.shields.io/badge/Open%20Source-100%25-blue.svg)](#)
+[![Live Website](https://img.shields.io/badge/Live%20Demo-Online-success.svg)](https://jacksimeon1.github.io/capstone-title-ai/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19-cyan.svg)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3-38bdf8.svg)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-v8-646cff.svg)](https://vitejs.dev/)
+
+**🌐 Live Demo Website**: [https://jacksimeon1.github.io/capstone-title-ai/](https://jacksimeon1.github.io/capstone-title-ai/)
 
 An open-source academic research platform and intelligent capstone project title generator, validator, diagnostic analyzer, and thesis defense assistant designed for undergraduate students, graduate researchers, capstone teams, and academic faculty.
 
